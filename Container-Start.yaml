@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: centos
   remote_user: ansible
   become: yes
   become_method: sudo
@@ -15,7 +15,7 @@
 
   - name: Running the container
     docker_container:
-      image: gvenkat/rnswebapp:latest
+      image: naveengogu1/tomcat:latest
       name: webapp
       # path: docker
       state: started
